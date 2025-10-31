@@ -11,7 +11,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -59,9 +58,9 @@ class MainActivity : ComponentActivity() {
 
         val API_PUBLIC_KEY =
             "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEkGIqR7bC6cpt9DbMfFt8FpP1BEtlfbgayuMwMhXRrk1bRidhJXcGVvjocuol7xudJ8rWMNJr4sbhoTW3/KprhA=="
-        val UUID = "00000000-2965-d2d3-0000-00004642b1b1-keychain"
+        val DEVICE_UID = "00000000-2965-d2d3-0000-00004642b1b1-keychain"
 
-        val claySDK = ClaySDK.init(applicationContext, API_PUBLIC_KEY, UUID)
+        val claySDK = ClaySDK.init(applicationContext, API_PUBLIC_KEY, DEVICE_UID)
 
         Log.d(tag, claySDK.publicKey.replace("\n", "\\n"))
 
